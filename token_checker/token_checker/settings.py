@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-%#!^5ses*$!7*!c&vmfg)+zfmq#k*hxpi5oq%w9k%#xageejiy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://solchain-token-analyzer-production.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://solchain-token-analyzer-production.up.railway.app"]
 
 
 # Application definition
