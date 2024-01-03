@@ -1,0 +1,1 @@
+web: gunicorn token_checker.wsgi --log-file -

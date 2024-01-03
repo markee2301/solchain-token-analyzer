@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOL Chain Token Analyzer</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1>SOL Chain Token Analyzer</h1>
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input type="text" name="contract_address" placeholder="Enter contract address" autocomplete="off">
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if contract_address %}
+        <h3>Contract Address: {{ contract_address }}</h3>
+        <h2>Check on:</h2>
+        <a href="{% url 'redirect_to_website' 'solscan' contract_address %}" target="_blank">SolScan</a><br>
+        <a href="{% url 'redirect_to_website' 'rugcheck' contract_address %}" target="_blank">RugCheck</a><br>
+        <a href="{% url 'redirect_to_website' 'birdeye' contract_address %}" target="_blank">BirdEye</a><br>
+        <a href="{% url 'redirect_to_website' 'dextools' contract_address %}" target="_blank">DexTools</a><br>
+        <a href="{% url 'redirect_to_website' 'dexscreener' contract_address %}" target="_blank">DexScreener</a>
+    {% endif %}
+
+    <div class="contact">
+        <p>- Contact Developer -</p>
+        <ul class="dev-socials">
+            <li><a href="https://www.facebook.com/markee2301" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://www.instagram.com/super.markee" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com/M4rkeee" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="mailto:itsmark2301@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+        <p>- Buy me a coffee - </p>
+        <p>SOL: <span>J5E9gvcR5DFvbVi2gKU8QGKRY2jHMHtpSDtLiudZkxXK</span></p>
+    </div>
+
+
+</body>
+</html>

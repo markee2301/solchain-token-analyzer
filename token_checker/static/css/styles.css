@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+a:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.contact{
+    text-align: center;
+}
+
+p{
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+p span{
+    font-style: normal;
+    font-weight: 100;
+    font-size: small;
+}
+
+.dev-socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+  
+.dev-socials li {
+    margin-right: 10px;
+}
+
+.dev-socials li:last-child {
+    margin-right: 0;
+}
+
+.dev-socials li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}

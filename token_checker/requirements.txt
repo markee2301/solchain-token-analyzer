@@ -1,0 +1,5 @@
+Django>=4.1
+requests
+Pillow
+whitenoise
+gunicorn
